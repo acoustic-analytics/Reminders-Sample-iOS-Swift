@@ -45,7 +45,7 @@ class RemindersViewController: UIViewController {
         RemindersDataSource.sharedInstance.deleteReminder(reminder_id: reminder_id)
         self.tableView.reloadData()
         self.selectedIndex = nil
-        TLFCustomEvent.sharedInstance().logScreenLayout(with: self)  // Manually capturing the screen for newly loaded table contents
+        TLFCustomEvent.sharedInstance()?.logScreenLayoutDynamicUpdate(with: self, andRelatedViews: nil)// Manually capturing the screen for newly loaded table contents
     }
     
     @IBAction func addReminder(_ sender: Any) {
