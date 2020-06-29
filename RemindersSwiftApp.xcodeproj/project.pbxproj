@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07451F7288DB8D480CF96219 /* Pods_RemindersSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EBF71806A9CF707118A281 /* Pods_RemindersSwiftApp.framework */; };
+		63B57DA624AA4D6A00680B0C /* CryptographyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B57DA524AA4D6A00680B0C /* CryptographyExtensions.swift */; };
 		F60AF34B1F2FBB1D00A6FC57 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60AF34A1F2FBB1D00A6FC57 /* CFNetwork.framework */; };
 		F60AF34D1F2FBB2800A6FC57 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60AF34C1F2FBB2800A6FC57 /* SystemConfiguration.framework */; };
 		F60AF34F1F2FBB3400A6FC57 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60AF34E1F2FBB3400A6FC57 /* CoreLocation.framework */; };
@@ -97,6 +98,7 @@
 
 /* Begin PBXFileReference section */
 		0C7C3BBDB98BEAB6D9FCD52D /* Pods-RemindersSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindersSwiftApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
+		63B57DA524AA4D6A00680B0C /* CryptographyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptographyExtensions.swift; sourceTree = "<group>"; };
 		65EBF71806A9CF707118A281 /* Pods_RemindersSwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemindersSwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9512AB20F6950882AE0B63 /* Pods-RemindersSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindersSwiftApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F60AF34A1F2FBB1D00A6FC57 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -162,6 +164,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63B57DA424AA4D2A00680B0C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63B57DA524AA4D6A00680B0C /* CryptographyExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9BA68328B2B080D5B267A297 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +222,7 @@
 		F6166FA01F27C53B003C409E /* RemindersSwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				63B57DA424AA4D2A00680B0C /* Extensions */,
 				F6166FA11F27C53B003C409E /* AppDelegate.swift */,
 				F6166FA31F27C53B003C409E /* RemindersViewController.swift */,
 				F65959B41F2A990100BBD99F /* ReminderTableViewCell.swift */,
@@ -298,7 +309,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = IBM;
 				TargetAttributes = {
 					F6166F9D1F27C53B003C409E = {
@@ -310,10 +321,9 @@
 			};
 			buildConfigurationList = F6166F991F27C53B003C409E /* Build configuration list for PBXProject "RemindersSwiftApp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -437,9 +447,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp-frameworks.sh",
-				"${PODS_ROOT}/EOCore/SDKs/iOS/Release/EOCore.framework",
-				"${PODS_ROOT}/IBMTealeaf/SDKs/iOS/Release/Tealeaf.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp-frameworks.sh",
+				"${PODS_ROOT}/EOCoreDebug/SDKs/iOS/Debug/EOCore.framework",
+				"${PODS_ROOT}/IBMTealeafDebug/SDKs/iOS/Debug/Tealeaf.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -448,7 +458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C5163689E1F1A216366E37E3 /* [CP] Copy Pods Resources */ = {
@@ -457,9 +467,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp-resources.sh",
-				"${PODS_ROOT}/EOCore/SDKs/iOS/Release/EOCore.framework/EOCoreSettings.bundle",
-				"${PODS_ROOT}/IBMTealeaf/SDKs/iOS/Release/Tealeaf.framework/TLFResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp-resources.sh",
+				"${PODS_ROOT}/EOCoreDebug/SDKs/iOS/Debug/EOCore.framework/EOCoreSettings.bundle",
+				"${PODS_ROOT}/IBMTealeafDebug/SDKs/iOS/Debug/Tealeaf.framework/TLFResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -468,7 +478,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemindersSwiftApp/Pods-RemindersSwiftApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -481,6 +491,7 @@
 				F65959AE1F2A8BE700BBD99F /* AddReminderViewController.swift in Sources */,
 				F6CA7C1B1F30F447006EBEA9 /* main.swift in Sources */,
 				F65959B51F2A990100BBD99F /* ReminderTableViewCell.swift in Sources */,
+				63B57DA624AA4D6A00680B0C /* CryptographyExtensions.swift in Sources */,
 				F6CA7C191F30F34C006EBEA9 /* RemindersCustomApplication.swift in Sources */,
 				F6166FB61F27C659003C409E /* RemindersDataSource.swift in Sources */,
 				F6166FA21F27C53B003C409E /* AppDelegate.swift in Sources */,
@@ -528,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -538,6 +550,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -545,6 +558,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -571,12 +585,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -584,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -594,6 +611,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -601,6 +619,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -621,10 +640,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -651,8 +672,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsoncustomerengagement.RemindersSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -678,8 +699,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsoncustomerengagement.RemindersSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -701,8 +722,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsoncustomerengagement.RemindersSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -724,8 +745,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsoncustomerengagement.RemindersSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
