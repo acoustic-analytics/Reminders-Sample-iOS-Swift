@@ -14,9 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    static func temporaryFixUpForTextLayoutView()
+    {
+        if #available(iOS 13.2, *)
+        {
+        }
+        else
+        {
+            let className = "_UITextLayoutView"
+            let theClass = objc_getClass(className)
+            if theClass == nil
+            {
+                let classPair: AnyClass? = objc_allocateClassPair(UIView.self, className, 0)
+                objc_registerClassPair(classPair!)
+            }
+        }
+    }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AppDelegate.temporaryFixUpForTextLayoutView()
         let tlfApplicationHelperObj =  TLFApplicationHelper()
         tlfApplicationHelperObj.enableTealeafFramework()
         return true
