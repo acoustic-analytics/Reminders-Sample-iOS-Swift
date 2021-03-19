@@ -310,7 +310,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = IBM;
+				ORGANIZATIONNAME = Acoustic;
 				TargetAttributes = {
 					F6166F9D1F27C53B003C409E = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -696,7 +696,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsoncustomerengagement.RemindersSwiftApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aco.watsoncustomerengagement.RemindersSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -719,7 +719,7 @@
 					"$(PROJECT_DIR)/RemindersSwiftApp",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsoncustomerengagement.RemindersSwiftApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aco.watsoncustomerengagement.RemindersSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -742,7 +742,7 @@
 					"$(PROJECT_DIR)/RemindersSwiftApp",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsoncustomerengagement.RemindersSwiftApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aco.watsoncustomerengagement.RemindersSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
