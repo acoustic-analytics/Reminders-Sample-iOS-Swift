@@ -669,7 +669,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.watsoncustomerengagement.RemindersSwiftApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aco.watsoncustomerengagement.RemindersSwiftApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
