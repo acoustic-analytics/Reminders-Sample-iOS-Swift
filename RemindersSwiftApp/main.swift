@@ -3,7 +3,7 @@
 //  RemindersSwiftApp
 //
 //  Created by Chanikya on 8/1/17.
-//  Copyright © 2017 IBM. All rights reserved.
+//  Copyright (C) 2017 Acoustic, L.P. All rights reserved.
 //
 
 import Foundation
